@@ -22,9 +22,9 @@ class DisplayActivity : AppCompatActivity() {
         //checks the result code, if OK, modifies the text
     val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
         if(it.resultCode == RESULT_OK){
-            val newSize = it.data?.getFloatExtra(TEXT_SIZE_KEY, 22f)
+            val newSize = it.data?.getIntExtra(TEXT_SIZE_KEY, 22)
             if (newSize != null) {
-                lyricsDisplayTextView.textSize = newSize
+                lyricsDisplayTextView.textSize = newSize.toFloat()
             }
         }
     }
