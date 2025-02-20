@@ -24,7 +24,7 @@ class TextSizeActivity : AppCompatActivity() {
         with (findViewById(R.id.textSizeSelectorRecyclerView) as RecyclerView) {
 
             // TODO Step 2: Pass selected value back to activity that launched TextSizeActivity
-            //created a new Intent
+            //created a new Intent and inserted the selected text size
             adapter = TextSizeAdapter(textSizes){
                 val result = Intent()
                 result.putExtra(TEXT_SIZE_KEY, it)
